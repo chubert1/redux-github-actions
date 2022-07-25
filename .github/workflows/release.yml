@@ -1,0 +1,16 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - run : docker build . -t flaubert1/redux-github-actions
+    - run : echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password stdin
+    - run : docker login -u flaubert1
+    - run : docker push flaubert1/redux-github-actions

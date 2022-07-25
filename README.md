@@ -44,3 +44,36 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# git command : Create and switch to a new branch : Switched to a new branch 'new-github-actions'
+git checkout -b new-github-actions
+# ajout et git commit this changed 
+git add .
+git commit -m "add github actions"
+# git push to repository github
+git push
+git push --set-upstream origin new-github-actions
+# git : retour sur main branch / Switched to branch 'main'
+git checkout main
+
+# git pull : transfert des transformation de github sur le local repository 
+git pull
+# git command : Create and switch to a new branch : Switched to a new branch 'failed-test'
+git checkout -b failed-test
+
+# ajout d'une erreur dans les tests et git commit this changed 
+git add .
+git commit -m "fix test"
+
+# git push to repository github
+git push
+git push --set-upstream origin failed-test
+
+# git command : Create and switch to a new branch : Switched to a new branch 'successful-test'
+git checkout -b successful-test
+# correction de l' erreur dans les tests et git commit this changed 
+git add .
+git commit -m "fix test"
+# git push to repository github
+git push
+git push --set-upstream origin successful-test
