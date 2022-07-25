@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run : docker build . -t flaubert1/redux-github-actions
-    - run : echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
+    - run : echo "bf7a008d-c383-41d6-b4b2-ff1c0e535b07" | docker login -u flaubert1 --password-stdin
     - run : docker login -u flaubert1
     - run : docker push flaubert1/redux-github-actions
